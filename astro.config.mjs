@@ -94,8 +94,8 @@ export default defineConfig({
     // https://docs.astro.build/en/guides/syntax-highlighting/
     shikiConfig: {
       themes: {
-        light: 'github-light',
-        dark: 'github-dark'
+        light: 'one-light',
+        dark: 'one-dark-pro'
       },
       transformers: [
         transformerNotationDiff(),
