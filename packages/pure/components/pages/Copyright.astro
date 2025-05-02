@@ -91,7 +91,7 @@ const shares = {
         <Icon class='size-5' name='qrcode' />
       </button>
       {
-        config.content.share.map((share) => (
+        config.content.share.map((share: keyof typeof shares) => (
           <a
             href={shares[share].link}
             target='_blank'
