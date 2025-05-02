@@ -1,19 +1,14 @@
 ---
 import { Image } from 'astro:assets'
 
-import type { iconsType } from 'astro-pure/types'
-import { Button, Collapse, Icon } from 'astro-pure/user'
+import { Collapse } from 'astro-pure/user'
 import PageLayout from '@/layouts/CommonPage.astro'
 import ProjectSection from '@/components/projects/ProjectSection.astro'
-import config from '@/site-config'
 
 const headings = [
   { depth: 2, slug: 'theme', text: 'Theme' },
-  { depth: 2, slug: 'programs', text: 'Programs' },
-  { depth: 2, slug: 'learnings', text: 'Learnings' },
-  { depth: 2, slug: 'others', text: 'Others' },
-  { depth: 2, slug: 'gpg-signature', text: 'GPG Signature' },
-  { depth: 2, slug: 'sponsorship', text: 'Sponsorship' }
+  { depth: 2, slug: 'personal', text: 'Personal' },
+  { depth: 2, slug: 'school', text: 'School' }
 ]
 ---
 
@@ -28,13 +23,11 @@ const headings = [
     />
   </p>
   <p>
-    If you think it would be useful or interesting to collaborate on a project, you can contact me to discuss a project.
+    If you think it would be useful or interesting to collaborate on a project, you can contact me
+    to discuss a project.
   </p>
-  <Button title='Checkout sponsorship' class='w-fit' href='#sponsorship'>
-    <Icon class='size-5' name='receive-money' slot='before' />
-  </Button>
 
-  <h2 id='programs'>Programs</h2>
+  <h2 id='personal'>Personal</h2>
   <ProjectSection
     project={[
       {
@@ -80,7 +73,7 @@ const headings = [
     />
   </Collapse>
 
-  <h2 id='learnings'>Learnings</h2>
+  <h2 id='school'>School Projects</h2>
   <ProjectSection
     class='my-2'
     project={[
@@ -102,20 +95,3 @@ const headings = [
     ]}
   />
 </PageLayout>
-
-<script
-  is:inline
-  type='module'
-  data-astro-rerun
-  define:vars={{ npmCDN: config.npmCDN, walineServer: config.integ.waline.server }}
->
-  const loadPageviewCount = async () => {
-    const pageview = await import(`${npmCDN}/@waline/client@v3/dist/pageview.js`)
-    pageview.pageviewCount({
-      serverURL: walineServer,
-      path: window.location.pathname
-    })
-  }
-
-  await loadPageviewCount()
-</script>
