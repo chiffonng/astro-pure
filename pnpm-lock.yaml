@@ -11,11 +11,14 @@ importers:
       '@astrojs/check':
         specifier: ^0.9.4
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.8.3)
+      '@astrojs/markdown-remark':
+        specifier: ^6.3.1
+        version: 6.3.1
       '@astrojs/rss':
         specifier: ^4.0.11
         version: 4.0.11
       '@astrojs/vercel':
-        specifier: ^8.0.3
+        specifier: 8.1.4
         version: 8.1.4(astro@5.7.10(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1))(rollup@4.40.1)(vue@3.5.13(typescript@5.8.3))
       '@playform/compress':
         specifier: ^0.1.7
@@ -27,14 +30,23 @@ importers:
         specifier: ^3.5.1
         version: 3.5.6(typescript@5.8.3)
       astro:
-        specifier: ^5.1.9
+        specifier: 5.7.10
         version: 5.7.10(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1)
       astro-pure:
         specifier: 1.2.5
         version: 1.2.5(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1)
+      hast-util-select:
+        specifier: ^6.0.4
+        version: 6.0.4
+      hastscript:
+        specifier: ^9.0.1
+        version: 9.0.1
       katex:
         specifier: ^0.16.21
         version: 0.16.22
+      rehype:
+        specifier: ^13.0.2
+        version: 13.0.2
       rehype-katex:
         specifier: ^7.0.1
         version: 7.0.1
@@ -47,6 +59,12 @@ importers:
       typescript:
         specifier: ^5.7.3
         version: 5.8.3
+      unist-util-is:
+        specifier: ^6.0.0
+        version: 6.0.0
+      unist-util-visit:
+        specifier: ^5.0.0
+        version: 5.0.0
       unocss:
         specifier: ^65.4.3
         version: 65.5.0(postcss@8.5.3)(vite@6.3.4(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.3))
