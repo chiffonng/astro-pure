@@ -7,13 +7,20 @@ import { Button, Card, Icon, Label } from 'astro-pure/user'
 import PageLayout from '@/layouts/BaseLayout.astro'
 import Section from '@/components/home/Section.astro'
 import SkillLayout from '@/components/home/SkillLayout.astro'
-import avatar from '@/assets/avatar.png'
+import avatar from '@/assets/avatar.jpg'
 import config from '@/site-config'
 
-const languages = ['Python', 'JavaScript', 'SQL', 'Shell']
+const languages = ['Python', 'JavaScript', 'SQL', 'Shell', 'R']
 const tools = ['Git', 'Docker', 'VSCode', 'Notion']
-const machineLearning = ['HuggingFace', 'PyTorch', 'scikit-learn', 'LlamaIndex/LangChain']
-const frameworks = ['Flask (Python)', 'React.js', 'Nuxt.js', 'Astro']
+const machineLearning = [
+  'HuggingFace',
+  'PyTorch',
+  'scikit-learn',
+  'litellm',
+  'LlamaIndex/LangChain'
+]
+const frameworks = ['Flask (Python)', 'Astro', 'React.js', 'Nuxt.js']
+const other = ['LaTeX', 'Markdown', 'Canva']
 
 const MAX_POSTS = 10
 const allPosts = await getBlogCollection()
@@ -112,6 +119,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
         <SkillLayout title='Tools' skills={tools} />
         <SkillLayout title='ML' skills={machineLearning} />
         <SkillLayout title='Frameworks' skills={frameworks} />
+        <SkillLayout title='Other' skills={other} />
       </Section>
 
       {/* Posts section moved inside the main content container */}
